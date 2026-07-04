@@ -3,9 +3,32 @@ export const portfolioData = {
     name: "Akshar Grover",
     tag: "BOT",
     avatarUrl: "/path-to-your-avatar.jpg",
-    bio: "Hi, I'm Akshar! I'm currently pursuing my Bachelor of Technology in Artificial Intelligence and Data Science at ADGIPS. I specialize in Large Language Models, AI agents, and complex workflow automation.",
-    education: "B.Tech in Artificial Intelligence and Data Science (Expected Sep 2027)",
-    cgpa: "9.03"
+    bio: "Hi, I'm Akshar! 👋 I'm a B.Tech student in Artificial Intelligence and Data Science at ADGIPS (Expected 2027), currently working as a CRO Intern at Locus where I focus on revenue workflow automation.  My core focus lies at the intersection of AI agents, Large Language Models, and complex workflow automation (using tools like LangGraph and n8n). Whether I am building RAG-based mental health chatbots or optimizing data pipelines for massive enterprise databases, I love building scalable systems that solve actual business problems.",
+    aboutMe: {
+      // ... existing name, tag, and bio ...
+      infoBoxes: [
+        {
+          label: "EDUCATION",
+          value: "B.Tech in Artificial Intelligence and Data Science (Expected Sep 2027)",
+          borderColor: "border-blue-400"
+        },
+        {
+          label: "CGPA",
+          value: "9.03",
+          borderColor: "border-green-400"
+        },
+        {
+          label: "Core Focus",
+          value: "AI Agents, LLMs, Workflow Automation",
+          borderColor: "border-purple-500"
+        },
+        {
+          label: "LOCATION",
+          value: "Delhi, India",
+          borderColor: "border-yellow-500"
+        }
+      ]
+    }
   },
   experience: [
     {
@@ -73,24 +96,22 @@ export const portfolioData = {
       description: "Finalist in a Hackathon organized by IIT Delhi in collaboration with ONDC, building a user dashboard."
     }
   ],
-  mockBotResponses: [
-    "I am currently in MVP offline mode! Please check out the #projects channel to see what I've been building.",
-    "Akshar is currently away from the keyboard building cool things, but you can email him at akshargrover@gmail.com!",
-    "I'm just a frontend mock bot right now. The live LangGraph AI backend is coming in v2.0!"
+  mockBotResponses: ["I'm just a frontend mock bot right now. The live LangGraph AI backend is coming in v2.0!"
   ],
   techStackRoles: [
     {
       roleName: "👑 ADMIN (Contact)",
       statusColor: "bg-green-500", // Online status dot
       members: [
-        { name: "github.com/akshargrover", link: "https://github.com/akshargrover" },
-        { name: "linkedin.com/in/akshargrover", link: "https://linkedin.com/in/akshargrover" },
-        { name: "akshargrover@gmail.com", link: "mailto:akshargrover@gmail.com" }
+        { name: "GitHub", link: "https://github.com/akshargrover" },
+        { name: "LinkedIn", link: "https://linkedin.com/in/akshargrover" },
+        { name: "Email", link: "mailto:akshargrover@gmail.com" },
+        { name: "Resume", link: "https://drive.google.com/file/d/1kF5RfgmpBp3j2nOWmv7GJuC0deHebB5K/view?usp=sharing" }
       ]
     },
     {
       roleName: "⚙️ BACKEND & AI",
-      statusColor: "bg-discord-blurple", 
+      statusColor: "bg-discord-blurple",
       members: [
         { name: "Python" },
         { name: "TensorFlow / PyTorch" },

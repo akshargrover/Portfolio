@@ -40,15 +40,13 @@ const AboutMe = () => {
                                 <div className="text-[15px] text-text-variant leading-relaxed mt-2">
                                     <p className="mb-4">{aboutMe.bio}</p>
 
-                                    <div className="grid grid-cols-2 gap-4 max-w-2xl mt-4">
-                                        <div className="bg-[#292932] p-4 rounded border-l-4 border-l-blue-400">
-                                            <h4 className="text-[12px] uppercase tracking-wider text-text-muted font-bold mb-2">Education</h4>
-                                            <p className="font-semibold text-text-main">{aboutMe.education}</p>
-                                        </div>
-                                        <div className="bg-[#292932] p-4 rounded border-l-4 border-l-green-400">
-                                            <h4 className="text-[12px] uppercase tracking-wider text-text-muted font-bold mb-2">CGPA</h4>
-                                            <p className="font-semibold text-text-main">{aboutMe.cgpa}</p>
-                                        </div>
+                                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
+                                        {(aboutMe.infoBoxes || aboutMe.aboutMe?.infoBoxes || []).map((box, index) => (
+                                            <div key={index} className={`bg-[#292932] p-4 rounded border-l-4 ${box.borderColor}`}>
+                                                <h4 className="text-xs font-bold text-discord-muted uppercase tracking-wide mb-1">{box.label}</h4>
+                                                <p className="font-semibold text-text-main">{box.value}</p>
+                                            </div>
+                                        ))}
                                     </div>
                                 </div>
                             </div>
