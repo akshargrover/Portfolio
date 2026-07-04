@@ -41,7 +41,7 @@ function App() {
 
             {/* Sidebars (Wrapped for mobile slide-in) */}
             <div
-                className={`fixed inset-y-0 left-0 z-50 flex h-full transform transition-transform duration-200 ease-in-out md:relative md:transform-none ${isMobileMenuOpen ? 'translate-x-0' : '-translate-x-full'
+                className={`fixed inset-y-0 left-0 z-[100] flex h-full transform transition-transform duration-200 ease-in-out md:relative md:transform-none ${isMobileMenuOpen ? 'translate-x-0' : '-translate-x-full'
                     }`}
             >
                 <ServerNavigation />
@@ -55,7 +55,7 @@ function App() {
             <div className="flex-1 w-full min-w-0 h-full relative flex flex-col">
                 {/* Mobile Hamburger Icon */}
                 <div
-                    className="md:hidden absolute top-0 left-2 w-10 h-12 flex items-center justify-center z-20 cursor-pointer"
+                    className="md:hidden absolute top-0 left-0 w-14 h-12 flex items-center justify-center z-[90] cursor-pointer"
                     onClick={() => setIsMobileMenuOpen(true)}
                 >
                     <svg className="w-6 h-6 text-text-muted hover:text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -66,7 +66,7 @@ function App() {
                 {/* 
            Dynamic padding for the absolute icon using child combinator injected to the mounted view's header div! 
         */}
-                <div className="w-full h-full [&>div>div:first-child]:pl-12 md:[&>div>div:first-child]:pl-4 flex-1 min-w-0 overflow-hidden">
+                <div className="w-full h-full [&>div>div:first-child]:pl-14 md:[&>div>div:first-child]:pl-4 flex-1 min-w-0 overflow-hidden">
                     {renderContent()}
                 </div>
             </div>
