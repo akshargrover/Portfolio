@@ -41,7 +41,7 @@ const Welcome = ({ setActiveChannel }) => {
 
                                 <div className="text-[15px] text-text-variant leading-relaxed space-y-4 mt-2">
                                     <p>Hello there! Welcome to my digital workspace. 👋</p>
-                                    <p>I'm a passionate developer focused on Backend systems, AI integrations, and creating seamless UI/UX experiences. This server is structured to showcase my journey, projects, and professional background.</p>
+                                    <p>I'm an AI and Data Science student specializing in Large Language Models, agentic frameworks (LangGraph), and complex workflow automation. This server is built to give you an interactive look into my professional journey and the scalable systems I build.</p>
                                     <p>Feel free to navigate through the channels on the left to learn more about my <span onClick={() => setActiveChannel('experience')} className="text-discord-accent cursor-pointer hover:underline font-medium">#experience</span> or check out some of my <span onClick={() => setActiveChannel('projects')} className="text-discord-accent cursor-pointer hover:underline font-medium">#projects</span>.</p>
 
                                     <div className="bg-[#292932] p-4 rounded border-l-4 border-l-yellow-400 mt-4 max-w-xl">
