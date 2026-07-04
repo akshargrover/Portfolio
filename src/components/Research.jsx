@@ -25,9 +25,13 @@ const Research = () => {
                     <div className="space-y-6">
                         <div className="flex -mx-4 px-4 hover:bg-[#2e3035]/40 py-2 transition-colors">
                             <div className="mr-4 mt-1 flex-shrink-0">
-                                <div className="w-10 h-10 rounded-full flex items-center justify-center font-bold text-white bg-discord-accent">
-                                    AK
-                                </div>
+                                {portfolioData?.aboutMe?.avatarUrl ? (
+                                    <img src={portfolioData.aboutMe.avatarUrl} alt="avatar" className="w-10 h-10 rounded-full object-cover" />
+                                ) : (
+                                    <div className="w-10 h-10 rounded-full flex items-center justify-center font-bold text-white bg-discord-accent">
+                                        AK
+                                    </div>
+                                )}
                             </div>
                             <div className="w-full">
                                 <div className="flex items-end mb-1 leading-5">

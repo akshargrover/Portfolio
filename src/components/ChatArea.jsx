@@ -81,9 +81,13 @@ const ChatArea = () => {
                     {messages.map((message) => (
                         <div key={message.id} className="flex hover:bg-[#2e3035]/40 -mx-4 px-4 py-1 mt-1 transition-colors group">
                             <div className="mr-4 mt-1 flex-shrink-0 cursor-pointer">
-                                <div className={`w-10 h-10 rounded-full flex items-center justify-center font-bold text-white ${message.isBot ? 'bg-discord-accent' : 'bg-green-600'}`}>
-                                    {message.isBot ? 'AB' : 'U'}
-                                </div>
+                                {message.isBot && portfolioData?.aboutMe?.avatarUrl ? (
+                                    <img src={portfolioData.aboutMe.avatarUrl} alt="avatar" className="w-10 h-10 rounded-full object-cover" />
+                                ) : (
+                                    <div className={`w-10 h-10 rounded-full flex items-center justify-center font-bold text-white ${message.isBot ? 'bg-discord-accent' : 'bg-green-600'}`}>
+                                        {message.isBot ? 'AB' : 'U'}
+                                    </div>
+                                )}
                             </div>
 
                             <div className="flex flex-col">
