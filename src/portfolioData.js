@@ -3,7 +3,7 @@ export const portfolioData = {
     name: "Akshar Grover",
     tag: "BOT",
     avatarUrl: "/1324832.png",
-    bio: "Hi, I'm Akshar! 👋 I'm a B.Tech student in Artificial Intelligence and Data Science at ADGIPS (Expected 2027), currently working as a CRO Intern at Locus where I focus on revenue workflow automation.  My core focus lies at the intersection of AI agents, Large Language Models, and complex workflow automation (using tools like LangGraph and n8n). Whether I am building RAG-based mental health chatbots or optimizing data pipelines for massive enterprise databases, I love building scalable systems that solve actual business problems.",
+    bio: "Hi, I'm Akshar! 👋 I'm a B.Tech student in Artificial Intelligence and Data Science at ADGIPS (Expected 2027). My core focus lies at the intersection of AI agents, Large Language Models, and complex workflow automation (using tools like LangGraph and n8n). Whether I am building RAG-based mental health chatbots or optimizing data pipelines for massive enterprise databases, I love building scalable systems that solve actual business problems.",
     aboutMe: {
       // ... existing name, tag, and bio ...
       infoBoxes: [
