@@ -30,7 +30,7 @@ function App() {
     };
 
     return (
-        <div className="flex h-screen w-full bg-discord-serverRail text-text-main overflow-hidden relative">
+        <div className="flex h-[100dvh] w-full bg-discord-serverRail text-text-main overflow-hidden relative">
             {/* Mobile Overlay Backdrop */}
             {isMobileMenuOpen && (
                 <div
