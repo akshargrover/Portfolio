@@ -32,19 +32,29 @@ export const portfolioData = {
       title: "Calmbot",
       date: "June 2025",
       techStack: ["LangChain", "RAG", "FAISS", "Gemini Flash"],
-      description: "Developed a mental health-focused AI chatbot that delivers context-aware, supportive responses. Enhanced with document-grounded Q&A, conversational memory, Streamlit UI, and crisis detection."
+      description: "Developed a mental health-focused AI chatbot that delivers context-aware, supportive responses. Enhanced with document-grounded Q&A, conversational memory, Streamlit UI, and crisis detection.",
+      githubLink: "https://github.com/akshargrover/calmbot_langgraph" // Replace with actual repo name
     },
     {
       title: "E-commerce Customer Engagement Automation",
       date: "July 2025",
       techStack: ["Python", "n8n", "Twilio", "Shopify"],
-      description: "Architected a centralized tracking system using Google Sheets to monitor customer and cart status, enabling conditional messaging via Gmail, Twilio, and Slack."
+      description: "Architected a centralized tracking system using Google Sheets to monitor customer and cart status, enabling conditional messaging via Gmail, Twilio, and Slack.",
+      githubLink: "https://github.com/akshargrover/Shopify-Automation-Workflow" // Replace with actual repo name
     },
     {
-      title: "Tweet Sentiment Analysis & Spam Mail Classifier",
-      date: "2024 - 2025",
-      techStack: ["TensorFlow", "scikit-learn", "NLP", "spaCy"],
-      description: "Built distinct ML models leveraging TF-IDF and Random Forest/Adam optimizers to classify text data, achieving 96.68% accuracy on spam detection."
+      title: "Tweet Sentiment Analysis",
+      date: "May 2025",
+      techStack: ["TensorFlow", "scikit-learn", "spaCy", "Python"],
+      description: "Implemented a sentiment analysis model to classify tweets as positive or negative using a Random Forest classifier with TF-IDF vectorization.",
+      githubLink: "https://github.com/akshargrover/tweet-sentiment-analysist" // Replace with actual repo name
+    },
+    {
+      title: "Spam Mail Classifier",
+      date: "October 2024",
+      techStack: ["TensorFlow", "scikit-learn", "NLP", "Python"],
+      description: "Applied NLP techniques to analyze email text and identify common spam patterns utilizing the Adam optimizer, achieving 96.68% accuracy.",
+      githubLink: "https://github.com/akshargrover/Spam-Mail-Classifier" // Replace with actual repo name
     }
   ],
   research: {

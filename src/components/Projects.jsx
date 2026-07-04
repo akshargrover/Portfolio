@@ -35,21 +35,31 @@ const Projects = () => {
                                         <span className="text-[12px] text-text-muted leading-4 font-medium">{proj.date}</span>
                                     </div>
 
-                                    <div className="mt-2 p-4 bg-[#292932] border-l-4 border-l-discord-accent rounded-r-md max-w-lg mb-2">
+                                    <a
+                                        href={proj.githubLink || "#"}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="mt-2 p-4 bg-[#292932] border-l-4 border-l-discord-accent rounded-r-md max-w-lg mb-2 block transition-all duration-200 hover:bg-[#34343d] hover:-translate-y-0.5 cursor-pointer no-underline group group-hover:block"
+                                    >
                                         <div className="text-discord-accent text-[12px] font-bold mb-1 uppercase tracking-widest">
                                             Project Data
                                         </div>
-                                        <h2 className="text-text-main font-bold text-[18px] mb-2">{proj.title}</h2>
+                                        <h2 className="text-blue-400 group-hover:underline font-bold text-[18px] mb-2 flex items-center">
+                                            {proj.title}
+                                            <svg className="w-4 h-4 ml-2 text-text-muted" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                                            </svg>
+                                        </h2>
                                         <p className="text-[14px] text-text-variant mb-4">{proj.description}</p>
 
                                         <div className="flex flex-wrap gap-2 mb-2">
                                             {proj.techStack.map((tech, tIdx) => (
-                                                <span key={tIdx} className="bg-[#1a1b23] text-text-muted px-2 py-1 rounded text-[12px] font-bold tracking-wide">
+                                                <span key={tIdx} className="bg-[#1a1b23] text-text-muted px-2 py-1 rounded text-[12px] font-bold tracking-wide group-hover:border-discord-accent transition-colors">
                                                     {tech}
                                                 </span>
                                             ))}
                                         </div>
-                                    </div>
+                                    </a>
                                 </div>
                             </div>
                         ))}
