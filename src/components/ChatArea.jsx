@@ -13,10 +13,15 @@ const ChatArea = () => {
     ]);
     const [inputValue, setInputValue] = useState('');
     const [isTyping, setIsTyping] = useState(false);
-    const messagesEndRef = useRef(null);
+    const scrollContainerRef = useRef(null);
 
     const scrollToBottom = () => {
-        messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+        if (scrollContainerRef.current) {
+            scrollContainerRef.current.scrollTo({
+                top: scrollContainerRef.current.scrollHeight,
+                behavior: 'smooth'
+            });
+        }
     };
 
     useEffect(() => {
@@ -63,7 +68,7 @@ const ChatArea = () => {
                 <h2 className="text-[15px] font-bold text-text-main font-sans tracking-wide">💬 chat-with-akshar</h2>
             </div>
 
-            <div className="flex-1 overflow-y-auto px-4 pt-4 pb-2">
+            <div ref={scrollContainerRef} className="flex-1 overflow-y-auto px-4 pt-4 pb-2">
                 <div className="space-y-6">
                     <div className="mt-8 mb-12">
                         <div className="w-16 h-16 bg-[#34343d] rounded-full flex items-center justify-center mb-4">
@@ -104,8 +109,6 @@ const ChatArea = () => {
                             <span className="ml-2">Akshar Grover is typing...</span>
                         </div>
                     )}
-
-                    <div ref={messagesEndRef} />
                 </div>
             </div>
 
