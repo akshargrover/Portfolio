@@ -14,7 +14,7 @@ const Welcome = ({ setActiveChannel }) => {
                         <div className="w-16 h-16 bg-[#34343d] rounded-full flex items-center justify-center mb-4">
                             <span className="text-3xl text-text-muted font-bold">#</span>
                         </div>
-                        <h1 className="text-[32px] font-bold text-white mb-2">Welcome to #welcome!</h1>
+                        <h1 className="text-[32px] font-bold text-white mb-2">Welcome to #Akshar's Portfolio!</h1>
                         <p className="text-[15px] text-text-variant">This is the start of the #welcome channel.</p>
                     </div>
 
@@ -28,7 +28,7 @@ const Welcome = ({ setActiveChannel }) => {
                             <div className="w-full">
                                 <div className="flex items-end mb-1 leading-5">
                                     <span className="text-[15px] font-medium text-text-main hover:underline cursor-pointer mr-2 flex items-center">
-                                        Akshar
+                                        Akshar Grover
                                         <span className="ml-2 px-1 bg-discord-accent text-white text-[10px] rounded leading-3 tracking-wide font-bold py-[2px]">ADMIN</span>
                                     </span>
                                     <span className="text-[12px] text-text-muted leading-4 font-medium">Just now</span>

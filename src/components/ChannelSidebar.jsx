@@ -43,6 +43,9 @@ const ChannelSidebar = ({ activeChannel, setActiveChannel }) => {
                         <div onClick={() => setActiveChannel('projects')} className={navItemClass('projects')}>
                             <span className="text-xl mr-2 text-text-muted">#</span><span className="text-[15px] leading-5">projects</span>
                         </div>
+                        <div onClick={() => setActiveChannel('tech-stack')} className={navItemClass('tech-stack')}>
+                            <span className="text-xl mr-2 text-text-muted">#</span><span className="text-[15px] leading-5">⚙️ tech-stack</span>
+                        </div>
                     </div>
                 </div>
 

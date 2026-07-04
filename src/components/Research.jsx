@@ -31,7 +31,7 @@ const Research = () => {
                             </div>
                             <div className="w-full">
                                 <div className="flex items-end mb-1 leading-5">
-                                    <span className="text-[15px] font-medium text-text-main hover:underline cursor-pointer mr-2">Akshar</span>
+                                    <span className="text-[15px] font-medium text-text-main hover:underline cursor-pointer mr-2">Akshar Grover</span>
                                     <span className="text-[12px] text-text-muted leading-4 font-medium">Just now</span>
                                 </div>
 

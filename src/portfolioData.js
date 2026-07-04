@@ -106,5 +106,22 @@ export const portfolioData = {
         { name: "HTML / CSS / JS" }
       ]
     }
-  ]
+  ],
+  techStack: {
+    introMessage: "Here is a breakdown of the tools and technologies I use to build AI agents and automate workflows:",
+    categories: [
+      {
+        category: "⚙️ BACKEND & AI",
+        skills: "Python, TensorFlow, PyTorch, LangChain, LangGraph, OpenCV, SQL"
+      },
+      {
+        category: "🚀 AUTOMATION & TOOLS",
+        skills: "n8n, Twilio, Git, Bash"
+      },
+      {
+        category: "🌐 FRONTEND",
+        skills: "React, Tailwind CSS, HTML, CSS, JavaScript"
+      }
+    ]
+  }
 };

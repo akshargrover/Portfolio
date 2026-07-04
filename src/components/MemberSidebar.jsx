@@ -22,7 +22,7 @@ const MemberSidebar = () => {
                                     <div className="flex items-center hover:bg-[#34343d] px-2 py-1 rounded-[4px] cursor-pointer transition-colors group">
                                         <div className="w-8 h-8 rounded-full bg-discord-accent flex items-center justify-center text-white font-bold text-[12px] relative flex-shrink-0">
                                             {initial}
-                                            <div className={`absolute -bottom-1 -right-1 w-[14px] h-[14px] ${role.statusColor || 'bg-green-500'} rounded-full border-[3px] border-[#2e3035] group-hover:border-[#34343d] transition-colors`}></div>
+                                            <div className="absolute -bottom-1 -right-1 w-[14px] h-[14px] bg-[#23a559] rounded-full border-[3px] border-[#2e3035] group-hover:border-[#34343d] transition-colors"></div>
                                         </div>
                                         <div className="ml-3 flex flex-col overflow-hidden">
                                             <span className="text-[15px] font-medium text-text-muted group-hover:text-text-main truncate leading-5">

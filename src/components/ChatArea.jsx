@@ -5,7 +5,7 @@ const ChatArea = () => {
     const [messages, setMessages] = useState([
         {
             id: 1,
-            sender: "Akshar's Bot",
+            sender: "Akshar Grover",
             isBot: true,
             text: "Hi there! Welcome to my portfolio. Feel free to ask me anything about my experience, or type 'hello' to try the mock bot out!",
             timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
@@ -46,7 +46,7 @@ const ChatArea = () => {
 
             const botMessage = {
                 id: Date.now() + 1,
-                sender: "Akshar's Bot",
+                sender: "Akshar Grover",
                 isBot: true,
                 text: randomReponse,
                 timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
@@ -101,7 +101,7 @@ const ChatArea = () => {
                             <span className="w-2 h-2 bg-text-muted rounded-full animate-bounce mr-1"></span>
                             <span className="w-2 h-2 bg-text-muted rounded-full animate-bounce mx-1" style={{ animationDelay: '150ms' }}></span>
                             <span className="w-2 h-2 bg-text-muted rounded-full animate-bounce mx-1" style={{ animationDelay: '300ms' }}></span>
-                            <span className="ml-2">Akshar's Bot is typing...</span>
+                            <span className="ml-2">Akshar Grover is typing...</span>
                         </div>
                     )}
 
