@@ -121,16 +121,16 @@ export const portfolioData = {
     introMessage: "Here is a breakdown of the tools and technologies I use to build AI agents and automate workflows:",
     categories: [
       {
-        category: "⚙️ BACKEND & AI",
-        skills: "Python, TensorFlow, PyTorch, LangChain, LangGraph, OpenCV, SQL"
+        category: "Languages",
+        skills: "Python, SQL ,HTML, CSS, C, Java,Javascript"
       },
       {
-        category: "🚀 AUTOMATION & TOOLS",
-        skills: "n8n, Twilio, Git, Bash"
+        category: "Technologies/Frameworks",
+        skills: "n8n,TensorFlow, Keras, Scikit-learn, XGBoost, Flask, Pytorch, OpenCV,LangChain,LangGraph"
       },
       {
-        category: "🌐 FRONTEND",
-        skills: "React, Tailwind CSS, HTML, CSS, JavaScript"
+        category: "Tools",
+        skills: "Git, Bash, Docker, VS Code, Jupyter Notebook, Google Colab"
       }
     ]
   }
