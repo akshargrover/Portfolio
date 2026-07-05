@@ -59,6 +59,13 @@ export const portfolioData = {
       githubLink: "https://github.com/akshargrover/calmbot_langgraph" // Replace with actual repo name
     },
     {
+      title: "LLM from scratch",
+      date: "April 2026",
+      techStack: ["Python ", "PyTorch", "Mixture-of-Experts", "Mixed precision training"],
+      description: "Developed a large language model training pipeline from the ground up using Python and PyTorch. Implemented modern transformer features including RMSNorm, RoPE, SwiGLU, KV caching, and Mixture-of-Experts layers.",
+      githubLink: "https://github.com/akshargrover/LLM_from_scratch" // Replace with actual repo name
+    },
+    {
       title: "E-commerce Customer Engagement Automation",
       date: "July 2025",
       techStack: ["Python", "n8n", "Twilio", "Shopify"],
