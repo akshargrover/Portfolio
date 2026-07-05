@@ -161,5 +161,32 @@ export const portfolioData = {
         skills: "Git, Bash, Docker, VS Code, Jupyter Notebook, Google Colab"
       }
     ]
+  },
+  chatOptions : [
+  {
+    id: 1,
+    question: "What is your core tech stack?",
+    answer: "For AI and backend architecture, I specialize in Python, LangGraph, n8n, and TensorFlow/PyTorch. On the frontend, I build clean, responsive UIs using React and Tailwind CSS."
+  },
+  {
+    id: 2,
+    question: "Can you highlight a few of your projects?",
+    answer: "Definitely! I built Calmbot (a LangChain RAG chatbot with conversational memory) and deployed a fully automated e-commerce cart recovery system using n8n with 99% reliability. I've also developed a LLM from scratch using PyTorch with features like RMSNorm, SwiGLU, and Rotary Positional Embeddings."
+  },
+  {
+    id: 3,
+    question: "What did you accomplish during your Locus internship?",
+    answer: "As an AI Engineering Intern, I engineered robust n8n workflows that parsed a massive database of over 400,000 contacts. I completely automated the extraction of revenue insights, significantly optimizing data visibility for the team."
+  },
+  {
+    id: 4,
+    question: "What is your educational background?",
+    answer: "I am currently pursuing my B.Tech in Artificial Intelligence and Data Science at ADGIPS (Expected 2027), where I maintain a 9.03 CGPA. I'm also active in the tech community and organize esports tournaments!"
+  },
+  {
+    id: 5,
+    question: "How can I get in touch with you?",
+    answer: "You can reach me directly at akshargrover@gmail.com, or connect with me on <a href='https://linkedin.com/in/akshargrover' target='_blank' rel='noopener noreferrer' class='text-[#00b0f4] hover:underline hover:text-blue-300'>LinkedIn</a>. I'm always open to chatting about AI, automation, or new opportunities!"
   }
+]
 };

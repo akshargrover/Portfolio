@@ -11,7 +11,7 @@ const ChatArea = () => {
             timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
         }
     ]);
-    const [inputValue, setInputValue] = useState('');
+    const [askedQuestionIds, setAskedQuestionIds] = useState([]);
     const [isTyping, setIsTyping] = useState(false);
     const scrollContainerRef = useRef(null);
 
@@ -28,37 +28,32 @@ const ChatArea = () => {
         scrollToBottom();
     }, [messages, isTyping]);
 
-    const handleSendMessage = (e) => {
-        e.preventDefault();
-        if (!inputValue.trim()) return;
-
+    const handleOptionClick = (option) => {
+        setAskedQuestionIds(prev => [...prev, option.id]);
+        
         const userMessage = {
             id: Date.now(),
             sender: "Guest User",
             isBot: false,
-            text: inputValue,
+            text: option.question,
             timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
         };
 
         setMessages(prev => [...prev, userMessage]);
-        setInputValue('');
         setIsTyping(true);
 
-        // Simulate 1000ms network request & randomized response
+        // Simulate processing delay
         setTimeout(() => {
-            const { mockBotResponses } = portfolioData;
-            const randomReponse = mockBotResponses[Math.floor(Math.random() * mockBotResponses.length)];
-
             const botMessage = {
                 id: Date.now() + 1,
                 sender: "Akshar Grover",
                 isBot: true,
-                text: randomReponse,
+                text: option.answer,
                 timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
             };
             setMessages(prev => [...prev, botMessage]);
             setIsTyping(false);
-        }, 1000);
+        }, 600);
     };
 
     return (
@@ -98,9 +93,10 @@ const ChatArea = () => {
                                     </span>
                                     <span className="text-[12px] text-text-muted leading-4 font-medium">{message.timestamp}</span>
                                 </div>
-                                <div className="text-[15px] text-text-variant leading-relaxed">
-                                    {message.text}
-                                </div>
+                                <div 
+                                    className="text-[15px] text-text-variant leading-relaxed" 
+                                    dangerouslySetInnerHTML={{ __html: message.text }}
+                                />
                             </div>
                         </div>
                     ))}
@@ -116,24 +112,18 @@ const ChatArea = () => {
                 </div>
             </div>
 
-            <div className="px-4 pb-6 pt-2 shrink-0">
-                <div className="bg-[#383842] rounded-md px-4 py-[10px] flex items-center shadow-sm">
-                    <button className="flex items-center justify-center h-6 w-6 rounded-full bg-[#4f545c] hover:bg-[#b9bbbe] transition-colors mr-4 group flex-shrink-0">
-                        <div className="w-[14px] h-[2px] bg-[#dcddde] group-hover:bg-[#36393f] absolute rounded-sm"></div>
-                        <div className="w-[2px] h-[14px] bg-[#dcddde] group-hover:bg-[#36393f] rounded-sm"></div>
-                    </button>
-
-                    <form className="flex-1 flex" onSubmit={handleSendMessage}>
-                        <input
-                            type="text"
-                            value={inputValue}
-                            onChange={(e) => setInputValue(e.target.value)}
-                            placeholder="Message #💬 chat-with-akshar"
-                            className="bg-transparent border-none outline-none text-[15px] text-text-main w-full font-sans placeholder-[#8f8fa0]"
-                            autoComplete="off"
-                        />
-                    </form>
-                </div>
+            <div className="flex flex-wrap gap-2 p-4 border-t border-discord-server shrink-0">
+                {portfolioData.chatOptions
+                    .filter(option => !askedQuestionIds.includes(option.id))
+                    .map((option) => (
+                        <button
+                            key={option.id}
+                            onClick={() => handleOptionClick(option)}
+                            className="border border-discord-blurple bg-transparent hover:bg-discord-blurple text-discord-primary text-sm px-4 py-2 rounded-full transition-all duration-200 cursor-pointer"
+                        >
+                            {option.question}
+                        </button>
+                    ))}
             </div>
         </div>
     );
